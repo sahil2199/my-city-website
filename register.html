@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel= "stylesheet"  href= "mystyle.css">
+
+<title>The city of Windsor</title>
+<script>    
+    function validate() {    
+        var fname = document.reg_form.fname;
+        var lname = document.reg_form.lname;  
+        var email = document.reg_form.email;     
+        var gender = document.reg_form.gender;    
+
+        if (fname.value.length <= 0) {    
+            alert("Name is required");    
+            fname.focus();    
+            return false;    
+        }    
+        if (lname.value.length <= 0) {    
+            alert("Last Name is required");    
+            lname.focus();    
+            return false;    
+        }    
+               
+        if (email.value.length <= 0) {    
+            alert("Email Id is required");    
+            email.focus();    
+            return false;    
+        }    
+        alert("You have registered successfully!");
+        return false;    
+    }    
+</script>    
+</head>  
+
+<body>
+    
+<nav class="navbar">
+  <!-- LOGO -->
+  <div class="logo"><a href="index.html">Windsor</a></div>
+
+<!-- Navigation -->
+<ul class="nav-links">
+  
+  <div class="menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="photogallery.html">Photo Gallery</a>
+  <a href="sportsteams.html">Sports Teams</a>
+  <a href="myaccount.html">My Account</a>
+  <a href="register.html">Register</a>
+  </ul>
+  </div>
+</nav>
+<section>
+<center><h1>Welcome to the city of Windsor!</h1></center>
+      
+			<center><h2><i>The River City</i></h2></center>
+<center><h2>Kindly register here to receive updates about upcoming events in the city.</h2></center>    
+    <hr>    
+    <form method="" action="" name="reg_form" onsubmit="validate()">    
+        <h2>Registration Form</h2>    
+        <table>    
+            <tr>    
+                <td><label>First Name: </label></td>    
+                <td>    
+                    <input type="text" name="fname" placeholder="First Name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Last Name: </label></td>    
+                <td>    
+                    <input type="text" name="lname" placeholder="Last Name">    
+                </td>    
+            </tr>      
+            <tr>    
+                <td><label>Gender: </label></td>    
+                <td>    
+                    <input type="radio" name="gender" value="male">Male    
+                    <input type="radio" name="gender" value="femele">Female    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Email Id: </label></td>    
+                <td>    
+                    <input type="text" name="email" placeholder="example@gmail.com">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td>    
+                    <input type="submit" name="submit" value="Submit">    
+                    <input type="reset" name="reset" value="Reset">    
+                </td>    
+            </tr> 
+            <tr>    
+                <td><label>Phone: </label></td>    
+                <td>    
+                    <input type="text" name="phone" placeholder="XXXXXXXXXX">    
+                </td>    
+            </tr>            
+        </table>    
+    </form>  
+</section>  
+</body>
+</html>
